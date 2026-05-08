@@ -1,0 +1,150 @@
+/* =============================================
+   TODO Task 2: Define CSS Custom Properties
+   ============================================= */
+:root {
+  --color-primary: #2563eb;    /* Deep Blue */
+  --color-secondary: #f8fafc;  /* Light Gray */
+  --color-text: #1e293b;       /* Slate Black */
+  --color-accent: #f59e0b;     /* Amber */
+  --spacing-unit: 1rem;
+  --border-radius: 8px;
+}
+
+/* =============================================
+   TODO Task 3: Base / Reset Styles
+   ============================================= */
+* {
+  /* Essential reset: ensures padding and border are included in total width */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =============================================
+   TODO Task 3: Typography — Headings
+   ============================================= */
+h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-unit);
+}
+
+h2 {
+  font-size: 1.75rem;
+  border-bottom: 2px solid var(--color-primary);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+/* Pseudo-element style */
+p::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--color-primary);
+  float: left;
+  margin-right: 5px;
+  line-height: 1;
+}
+
+/* =============================================
+   TODO Task 3: Navigation Links
+   ============================================= */
+nav {
+  background-color: #fff;
+  padding: var(--spacing-unit);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+nav a:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* =============================================
+   TODO Task 4: Header / Hero
+   ============================================= */
+#hero {
+  background: linear-gradient(135deg, var(--color-primary), #1e40af);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* =============================================
+   TODO Task 4: Cards & Box Model
+   ============================================= */
+.card-grid {
+  display: flex; /* Simple layout method */
+  gap: var(--spacing-unit);
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;        /* Inside space */
+  border: 1px solid #ddd; /* Visible edge */
+  margin-bottom: 1rem;    /* Outside space */
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;        /* Flexible sizing */
+}
+
+/* =============================================
+   TODO Task 5: Alternating List Items
+   ============================================= */
+.fancy-list {
+  list-style: none;
+  padding: 0;
+}
+
+.fancy-list li {
+  padding: 0.75rem;
+  border-left: 5px solid transparent;
+}
+
+.fancy-list li:nth-child(odd) {
+  background-color: #f1f5f9;
+  border-left-color: var(--color-primary);
+}
+
+.fancy-list li:nth-child(even) {
+  background-color: #fff;
+  border-left-color: var(--color-accent);
+}
+
+/* =============================================
+   TODO Task 6: Footer
+   ============================================= */
+footer {
+  background-color: var(--color-text);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
